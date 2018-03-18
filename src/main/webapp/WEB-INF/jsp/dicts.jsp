@@ -7,7 +7,7 @@
     <c:set var="path" value="${pageContext.request.contextPath}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
     <title>字典信息</title>
-    <script src="${path}/static/jquery-3.1.1.min.js"></script>
+    <script src="${path}/resources/plugin/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <table>
