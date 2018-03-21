@@ -9,7 +9,11 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import java.util.concurrent.atomic.AtomicInteger;
 
-//@WebListener
+/*
+
+
+@WebListener
+ */
 public class SessionListener implements HttpSessionListener,ServletContextListener{
 	@Override
 	public void sessionCreated(HttpSessionEvent se) {
