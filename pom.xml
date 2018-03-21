@@ -45,6 +45,12 @@
         </dependency>
         
         <!--web-->
+        <!-- 导入java ee jar 包 开发必备，奇怪的是有的项目没有也可-->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+        </dependency>
         <!--支持 Servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
