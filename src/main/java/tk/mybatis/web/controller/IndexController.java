@@ -11,8 +11,15 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class IndexController {
-    @RequestMapping(value = {"", "/index"})
-    public ModelAndView dicts() {
+    @RequestMapping(value = {""})
+    public ModelAndView hello() {
+        ModelAndView mv = new ModelAndView("hello");
+        mv.addObject("now", new Date());
+        return mv;
+    }
+
+    @RequestMapping(value = {"/index"})
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("now", new Date());
         return mv;
