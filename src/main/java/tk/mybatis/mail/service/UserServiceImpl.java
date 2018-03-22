@@ -7,11 +7,11 @@ import tk.mybatis.mail.dao.UserDao;
 
 @Service("userService")
 public class UserServiceImpl implements UserService{
-
-	@Autowired
-	UserDao userDao;
+//
+//	@Autowired
+//	UserDao userDao;
 	@Override
 	public void regist(User user) {
-		userDao.insertUser(user);
+//		userDao.insertUser(user);
 	}
 }

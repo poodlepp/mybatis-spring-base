@@ -23,7 +23,7 @@
 </p>
 
 <script src="/js/plugin/jquery-3.1.1.min.js"></script>
-<script src="/js/plugin/layui/layui.js"></script>
+<script src="/plugin/layui/layui.js"></script>
 <script src="/js/common/common.js"></script>
 <script >
     window.onload = function(){

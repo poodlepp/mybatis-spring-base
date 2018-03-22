@@ -81,7 +81,7 @@
 </div>
 
 
-<script src="${pageContext.request.contextPath}/static/jquery-3.1.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugin/jquery-3.1.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/plugin/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </body>
 </html>
