@@ -1,6 +1,6 @@
 package tk.mybatis.web.service;
 
-import tk.mybatis.web.model.SysDict;
+import tk.mybatis.web.bean.SysDict;
 
 import java.util.List;
 

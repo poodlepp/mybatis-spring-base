@@ -1,4 +1,4 @@
-package tk.mybatis.web.model;
+package tk.mybatis.web.bean;
 
 import java.io.Serializable;
 

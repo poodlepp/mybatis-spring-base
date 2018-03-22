@@ -1,7 +1,7 @@
-package tk.mybatis.web.mapper;
+package tk.mybatis.web.dao;
 
 import org.apache.ibatis.session.RowBounds;
-import tk.mybatis.web.model.SysDict;
+import tk.mybatis.web.bean.SysDict;
 
 import java.util.List;
 

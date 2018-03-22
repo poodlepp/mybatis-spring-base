@@ -1,6 +1,5 @@
-package tk.mybatis.web.model;
+package tk.mybatis.web.bean;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class TestDemo {
