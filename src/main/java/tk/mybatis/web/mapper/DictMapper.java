@@ -1,4 +1,4 @@
-package tk.mybatis.web.dao;
+package tk.mybatis.web.mapper;
 
 import org.apache.ibatis.session.RowBounds;
 import tk.mybatis.web.bean.SysDict;

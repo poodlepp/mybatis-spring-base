@@ -3,7 +3,7 @@ package tk.mybatis.web.service.impl;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.web.dao.DictMapper;
+import tk.mybatis.web.mapper.DictMapper;
 import tk.mybatis.web.bean.SysDict;
 import tk.mybatis.web.service.DictService;
 

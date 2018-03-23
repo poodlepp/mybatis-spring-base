@@ -30,12 +30,12 @@
                 <value>classpath:tk/mybatis/**/mapper/*.xml</value>
             </array>
         </property>
-        <property name="typeAliasesPackage" value="tk.mybatis.web.model"/>
+        <property name="typeAliasesPackage" value="tk.mybatis.**.bean"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="addToConfig" value="true"/>
-        <property name="basePackage" value="tk.mybatis.**.mapper"/>
+        <property name="basePackage" value="tk.mybatis.**.dao"/>
     </bean>
 
     <aop:aspectj-autoproxy/>
