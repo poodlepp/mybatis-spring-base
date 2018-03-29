@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import tk.mybatis.web.model.SysDict;
+import tk.mybatis.web.bean.SysDict;
 import tk.mybatis.web.service.DictService;
 
 import java.util.List;
