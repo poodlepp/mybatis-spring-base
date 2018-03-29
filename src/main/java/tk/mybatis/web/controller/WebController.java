@@ -3,6 +3,7 @@ package tk.mybatis.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import tk.mybatis.web.bean.UserMsg;
 import tk.mybatis.web.service.UserMsgService;
@@ -26,6 +27,7 @@ public class WebController {
 		return view;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "haveNewMsg")
 	public JsonResult haveNewMsg(UserMsg userMsg){
 		userMsgService.insertUserMsg(userMsg);

@@ -18,30 +18,39 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <span class="badge list-group-item-success">${msgList.size()}</span>
-                            这里已经有很多评论啦！
+                            <c:if test="${msgList.size() > 3}">
+                                这里已经有很多评论啦！
+                            </c:if>
+                            <c:if test="${msgList.size() <= 3}">
+                                快留下你宝贵的意见吧！
+                            </c:if>
                         </li>
                     </ul>
                 </div>
             </div>
 
+            <c:if test="${msgList.size()>0}">
+                <div style="max-height: 500px;" class="panel panel-default pre-scrollable">
+                    <c:forEach items="${msgList}"  var="itrator" varStatus="itratorS">
+                        <div class="media panel-body">
+                            <div class="media-left">
+                                <img style="width: 50px;height: 50px;" class="media-object" src="${pageContext.request.contextPath}/img/user/user${itratorS.count%4}.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">${itrator.username}</h4>
+                                <p>${itrator.msg}</p>
+                                <p>
+                                        <%--<fmt:formatDate value="${itrator.createTime}"/>发表--%>
+                                    <fmt:formatDate value="${itrator.createTime}" pattern="yyyy-MM-dd　HH:mm:ss"/>
 
-            <c:forEach items="${msgList}"  var="itrator" varStatus="itratorS">
-                <div class="media">
-                    <div class="media-left">
-                        <img style="width: 50px;height: 50px;" class="media-object" src="${pageContext.request.contextPath}/img/user/user${itratorS.count%4}.jpg" alt="">
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">${itrator.username}</h4>
-                        <p>${itrator.msg}</p>
-                        <p>
-                            <%--<fmt:formatDate value="${itrator.createTime}"/>发表--%>
-                        <fmt:formatDate value="${itrator.createTime}" pattern="yyyy-MM-dd　HH:mm:ss"/>
-
-                        </p>
-                        <hr>
-                    </div>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </c:forEach>
                 </div>
-            </c:forEach>
+            </c:if>
+
 
             <div>
                 <%--<button class="btn btn-success">留下点什么吧</button>--%>

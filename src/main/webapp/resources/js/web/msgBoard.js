@@ -20,6 +20,7 @@ function funcPageOnload(){
                 //alert("我在提交表单成功之后被调用");
                 if (data != null && data.success != null && data.success == true) {
                     $('#exampleModal').modal('hide');
+                    location.reload();
                 } else {
                 }
 
