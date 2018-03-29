@@ -1,6 +1,7 @@
-package tk.mybatis.web.mapper;
+package tk.mybatis.web.dao;
 
 import org.apache.ibatis.session.RowBounds;
+import org.springframework.stereotype.Repository;
 import tk.mybatis.web.bean.SysDict;
 
 import java.util.List;
@@ -8,7 +9,8 @@ import java.util.List;
 /**
  * @author liuzh
  */
-public interface DictMapper {
+@Repository
+public interface DictDao {
 
     /**
      * 根据主键查询

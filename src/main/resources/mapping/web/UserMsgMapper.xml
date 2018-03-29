@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tk.mybatis.web.dao.UserMsgDao">
+
+	<resultMap id="UserMsgResultMap" type="tk.mybatis.web.bean.UserMsg">
+        <id column="id" property="id" jdbcType="SMALLINT" javaType="java.lang.Integer"/>
+        <result column="user_name" property="username" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="msg" property="msg" jdbcType="VARCHAR"/>
+        <result column="parent_id" property="parentId" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="SMALLINT" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <insert id="insertUserMsg" useGeneratedKeys="true" keyProperty="id">
+        insert into user_msg(id, user_name, address,msg,state,parent_id,create_time)
+        values (#{id}, #{username}, #{address}, #{msg}, #{state}, #{parentId}, #{createTime})
+    </insert>
+
+
+    <select id="getUserMsgList" resultMap="UserMsgResultMap">
+      select *from user_msg
+      where 1=1
+          <if test="state != null and state != ''">
+              AND state = #{state}
+          </if>
+        order by create_time DESC
+    </select>
+
+
+</mapper>

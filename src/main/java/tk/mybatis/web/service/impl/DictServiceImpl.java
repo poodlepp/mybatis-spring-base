@@ -3,7 +3,7 @@ package tk.mybatis.web.service.impl;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.web.mapper.DictMapper;
+import tk.mybatis.web.dao.DictDao;
 import tk.mybatis.web.bean.SysDict;
 import tk.mybatis.web.service.DictService;
 
@@ -16,11 +16,11 @@ import java.util.List;
 public class DictServiceImpl implements DictService {
 
     @Autowired
-    private DictMapper dictMapper;
+    private DictDao dictDao;
 
     @Override
     public SysDict findById(Long id) {
-        return dictMapper.selectByPrimaryKey(id);
+        return dictDao.selectByPrimaryKey(id);
     }
 
     public List<SysDict> findBySysDict(SysDict sysDict, Integer offset, Integer limit) {
@@ -28,15 +28,15 @@ public class DictServiceImpl implements DictService {
         if(offset != null && limit != null){
             rowBounds = new RowBounds(offset, limit);
         }
-        return dictMapper.selectBySysDict(sysDict, rowBounds);
+        return dictDao.selectBySysDict(sysDict, rowBounds);
     }
 
     @Override
     public boolean saveOrUpdate(SysDict sysDict) {
         if(sysDict.getId() == null){
-            return dictMapper.insert(sysDict) == 1;
+            return dictDao.insert(sysDict) == 1;
         } else {
-            return dictMapper.updateById(sysDict) == 1;
+            return dictDao.updateById(sysDict) == 1;
         }
     }
 
@@ -45,6 +45,6 @@ public class DictServiceImpl implements DictService {
     	if(id == null){
     		throw new NullPointerException("id");
     	}
-        return dictMapper.deleteById(id) == 1;
+        return dictDao.deleteById(id) == 1;
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import tk.mybatis.mail.bean.User;
 import tk.mybatis.mail.dao.UserDao;
 
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService{
 //
 //	@Autowired
