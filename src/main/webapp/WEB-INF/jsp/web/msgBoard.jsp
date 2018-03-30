@@ -55,7 +55,7 @@
             <div>
                 <%--<button class="btn btn-success">留下点什么吧</button>--%>
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="lipy">留下点什么吧</button>
-                <button class="btn btn-primary">查看更多</button>
+                <%--<button class="btn btn-primary">查看更多</button>--%>
             </div>
         </div>
 
