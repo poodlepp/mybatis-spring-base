@@ -12,6 +12,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Welcome</title>
     <link href="${pageContext.request.contextPath}/plugin/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/plugin/jQueryTimeAxis/css/jquery.eeyellow.Timeline.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -38,7 +39,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <%--<li class="active"><a href="#">没有目的地</a></li>--%>
-                <li><a href="#">技术概览</a></li>
+                <li><a href="${pageContext.request.contextPath}/web/timeLine">技术概览</a></li>
                 <li><a href="${pageContext.request.contextPath}/web/msgBoard">留言板</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Discovery <span class="caret"></span></a>
@@ -86,6 +87,7 @@
 <!--ajax提交表单需要引入jquery.form.js-->
 <script type="text/javascript" src="http://malsup.github.io/jquery.form.js"></script>
 <script src="${pageContext.request.contextPath}/plugin/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/plugin/jQueryTimeAxis/js/jquery.eeyellow.Timeline.js"></script>
 <script type="text/javascript" language="JavaScript">
     window.onload=function(){
         if(!(typeof funcPageOnload=='undefined')){

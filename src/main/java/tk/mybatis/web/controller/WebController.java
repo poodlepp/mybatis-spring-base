@@ -35,4 +35,11 @@ public class WebController {
 		result.setSuccess(true);
 		return result;
 	}
+
+	@ResponseBody
+	@RequestMapping(value = "timeLine")
+	public ModelAndView timeLine(){
+		ModelAndView view = new ModelAndView("/web/timeLine");
+		return view;
+	}
 }
