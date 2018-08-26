@@ -9,5 +9,6 @@ public class TransferDemo {
 		System.out.println("werwer".length());
 		System.out.println("我的冬天".length());
 		System.out.println("werwer".length());
+
 	}
 }
